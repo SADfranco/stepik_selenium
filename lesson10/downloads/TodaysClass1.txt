@@ -1,0 +1,13 @@
+Handling Frames
+Handling multiple Windows
+Actions
+	Handling MouseOver
+	Context Click
+	Double Click
+	Drag and Drop
+	Send Keys through Actions
+	File upload
+Handling Modal Window/Entry add
+Taking Screenshot
+	
+

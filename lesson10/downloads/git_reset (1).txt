@@ -1,0 +1,163 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+Loading personal and system profiles took 1816ms.
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git init
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pom.xml
+        src/
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git status
+On branch master
+
+No commits yet
+Changes to be committed:
+        new file:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        pom.xml
+        src/
+
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+        add
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git add .
+warning: in the working copy of 'src/main/java/org/example/MyClass.java', CRLF will be replaced by LF the next time Git touches it
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git status
+On branch master
+No commits yet
+
+  (use "git rm --cached <file>..." to unstage)
+        new file:   pom.xml
+        new file:   src/main/java/org/example/MyClass.java
+
+[master (root-commit) 2c39912] Add new class
+ 3 files changed, 25 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/org/example/MyClass.java
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git status
+On branch master
+nothing to commit, working tree clean
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git add .
+warning: in the working copy of 'src/main/java/org/example/MyClass_2.java', CRLF will be replaced by LF the next time Git touches it
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git commit -m 'Added second new class'
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git log
+commit cd2ff21324232053709fc05d3f8d08ca46d7043f (HEAD -> master)
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:02:47 2023 +0300
+
+    Added second new class
+Date:   Mon Oct 23 21:00:26 2023 +0300
+    Add new class
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git diff
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git diff --staged
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/main/java/org/example/MyClass_3.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git diff
+
+commit cd2ff21324232053709fc05d3f8d08ca46d7043f
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:02:47 2023 +0300
+
+    Added second new class
+
+commit 2c399120ed6f69285a879a2c6d7565035ac76571
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:00:26 2023 +0300
+
+    Add new class
+~
+~
+~
+~
+~
+~
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git status             
+On branch master
+nothing to commit, working tree clean
+commit 3f90dca6fa2fce62333822a60a5390c5472cda40 (HEAD -> master)
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:06:31 2023 +0300
+
+    Added third new class
+
+commit cd2ff21324232053709fc05d3f8d08ca46d7043f
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:06:31 2023 +0300
+
+    Added third new class
+
+commit cd2ff21324232053709fc05d3f8d08ca46d7043f
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:02:47 2023 +0300
+
+    Added second new class
+
+path is correct and try again.
+At line:1 char:1
++ get reset --hard HEAD^^
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (get:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git reset --hard HEAD^^
+HEAD is now at 2c39912 Add new class
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git add .
+warning: in the working copy of 'src/main/java/org/example/MyClass_4.java', CRLF will be replaced by LF the next time Git touches it
+ 1 file changed, 4 insertions(+)
+ create mode 100644 src/main/java/org/example/MyClass_4.java
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git log
+commit aef522703f2cf060575987adbdf61992b70c3ba6 (HEAD -> master)
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:13:56 2023 +0300
+    Added forth new class
+commit 2c399120ed6f69285a879a2c6d7565035ac76571
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:00:26 2023 +0300
+    Add new class
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git reset --mixed HEAD^              
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/main/java/org/example/MyClass_4.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git add .
+warning: in the working copy of 'src/main/java/org/example/MyClass_4.java', CRLF will be replaced by LF the next time Git touches it
+ 1 file changed, 4 insertions(+)
+ create mode 100644 src/main/java/org/example/MyClass_4.java
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git log
+commit c5621fbf2cdeaa6290f0cb17f3acb48902d79e04 (HEAD -> master)
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:16:22 2023 +0300
+
+    Added forth new class one more
+
+commit 2c399120ed6f69285a879a2c6d7565035ac76571
+Author: Olena_Klymenko <lenaklymenko9@gmail.com>
+Date:   Mon Oct 23 21:00:26 2023 +0300
+
+    Add new class
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git reset --soft HEAD^                        
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/main/java/org/example/MyClass_4.java
+
+PS D:\Olena_Klymenko\AutoTest\Hillel_Olena\2023-08-17\lesson19_git_commands> 
