@@ -11,6 +11,8 @@ options = webdriver.ChromeOptions()
 #options.add_argument('--ignore-certificate-errors')
 options.add_argument('--window-size=1920,1080')
 #options.add_argument('--disable-cache')
+#options.add_argument("--disable-blink-features=AutomationControlled")
+#options.add_argument("--user-agent=Ваш кастомный или заранее выбранный юзер-агент")
 service = Service(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
